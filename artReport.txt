@@ -1,0 +1,136 @@
+commit 285540cc2dfcb731ff7d1e430900a686e59a20da
+Author: Bartosz Dempc <dempc.bartosz@gmail.com>
+Date:   Wed May 8 16:56:37 2019 +0200
+
+    init
+
+diff --git a/.gitmodules b/.gitmodules
+new file mode 100644
+index 0000000..e75e6fe
+--- /dev/null
++++ b/.gitmodules
+@@ -0,0 +1,12 @@
++[submodule "themes/hyde"]
++	path = themes/hyde
++	url = https://github.com/budparr/gohugo-theme-ananke.git
++[submodule "themes/hyde-hyde"]
++	path = themes/hyde-hyde
++	url = https://github.com/budparr/gohugo-theme-ananke.git
++[submodule "themes/m10c"]
++	path = themes/m10c
++	url = https://github.com/budparr/gohugo-theme-ananke.git
++[submodule "themes/m10cc"]
++	path = themes/m10cc
++	url = https://github.com/vaga/hugo-theme-m10c.git
+diff --git a/archetypes/default.md b/archetypes/default.md
+new file mode 100644
+index 0000000..00e77bd
+--- /dev/null
++++ b/archetypes/default.md
+@@ -0,0 +1,6 @@
++---
++title: "{{ replace .Name "-" " " | title }}"
++date: {{ .Date }}
++draft: true
++---
++
+diff --git a/config.toml b/config.toml
+new file mode 100644
+index 0000000..2d0df04
+--- /dev/null
++++ b/config.toml
+@@ -0,0 +1,4 @@
++baseURL = "http://example.org/"
++languageCode = "en-us"
++title = "DBlog"
++theme = "m10cc"
+diff --git a/content/posts/cars/Toyota-Rav4.md b/content/posts/cars/Toyota-Rav4.md
+new file mode 100644
+index 0000000..8c7a88c
+--- /dev/null
++++ b/content/posts/cars/Toyota-Rav4.md
+@@ -0,0 +1,49 @@
++---
++title: "Toyota Rav4"
++date: 2019-05-08T15:57:41+02:00
++draft: true
++---
++
++# Wymiana oleju
++## Silnik
++  2.2 d4d 2AT-FTV (bez DPF), 136 KM, produkcja 2006
++## Elementy
++### Olej silnikowy
++#### Ilość
++6l jesli wymieniamy filtr oleju. Najlepiej zakupić opakowanie 5l + 2 x 1l (Dodatkowy litr na ewentualne dolewki)
++#### Jaki olej ?
++ Zgodnie z zaleceniami Toyoty z książki serwisowej:  
++ _API: CF-4, CF lub CE, CD lub ACEA: B1._  
++ Lub najnowsze (na rok 2019), zgodnei z https://www.toyota.pl/service-and-accessories/genuine-oils/#/models:  
++    **brak DPF**: _SAE 5w30, ACEA: A5/B5, ACEA: A1/B1, API: SL/CF_  
++    **DPF**: _SAE 5w30, ACEA: A5/B5/C2, API:CF_  
++    Ja zakupiłem olej _ENEOS PREMIUM HYPER S 5W30 SN/SM/CF C2 A5/B5_  
++    Jak widać spełnia on normy: _API CF_ oraz _ACEA B5_ oraz _C2_, która akurat nie jest wymagana przy moim silniku.
++    Określa ona m.in niskopopiołowość tego oleju. Dlatego jest zalecana do silników wyposazonych w filtr _DPF_.
++### Filtr oleju
++Zalecana jest wymiana filtra oleju przy każdej wymianie oleju. Warto to zrobić, również dlatego, że w przypdaku tego silnika filtr jest w postaci wkładu i jest stosunkowo tani.
++### Podkładka korka spustowego
++### Spinki osłony podwozia
++### Mycie silnika
++### Płukanka
++### Plan działania
++| Akcja                  | Warunki          | Cena     | Czas [m]   |
++| ---------------------------|:---------------------------:| --------:|-----------:|
++| Płukanie silnika           | włączony i ciepły silnik    | 10-40 zł | 5-15       |
++| Zdjęcie dolnej osłony      | wyłączony silnik            |   --     |    10      |
++| Odkręcene korka spustowego | wyłączony silnik            |          |    5       |
++| Odkręcene korka wlewowego  | wyłączony silnik            |          |    5       |
++| Spuszczenie oleju          | wyłączony silnik            |   --     |    30      |
++| Wymiana filtra oleju       | wyłączony silnik            |   --     |    10      |
++| Montaż korka spustowego    | wyłączony silnik            |   --     |    10      |
++| Wlanie oleju               | wyłączony silnik            |   --     |    10      |
++| Zakręcenei korka wlewowego | wyłączony silnik            |   --     |    5       |
++### Lista elementów
++| Element                  |
++| --------------------|
++| Olej silnikowy             |                  |
++| Filtr oleju             |                  |
++| Podkładka korka spustowego             |                  |
++| Spinki osłony podwozia             |                  |
++| Płukanka silnika             |                  |
++| Preparat do mycia silnika             |                  |
+diff --git a/content/posts/first-post.md b/content/posts/first-post.md
+new file mode 100644
+index 0000000..756f7f1
+--- /dev/null
++++ b/content/posts/first-post.md
+@@ -0,0 +1,6 @@
++---
++title: "First Post"
++date: 2019-05-08T15:46:12+02:00
++draft: true
++---
++ffws
+diff --git a/resources/_gen/assets/scss/css/main.scss_e86386c8bae1cd02295de71a1be078d6.content b/resources/_gen/assets/scss/css/main.scss_e86386c8bae1cd02295de71a1be078d6.content
+new file mode 100644
+index 0000000..eaf59d1
+--- /dev/null
++++ b/resources/_gen/assets/scss/css/main.scss_e86386c8bae1cd02295de71a1be078d6.content
+@@ -0,0 +1 @@
++*{box-sizing:border-box}html{line-height:1.6}body{margin:0;font-family:sans-serif;background:#353b43;color:#afbac4}h1,h2,h3,h4,h5,h6{color:#fff}a{color:#57cc8a;text-decoration:none}a:hover{color:#fff;transition:color .8s}pre{overflow:auto}.app-header{padding:2.5em;background:#242930;text-align:center}.app-header-avatar{max-width:15rem;max-height:15rem;border-radius:100%;border:.5rem solid #57cc8a}.app-container{padding:2.5rem}.app-header-social{font-size:2em;color:#fff}.app-header-social a{margin:0 .1em}@media(min-width:940px){.app-header{position:fixed;top:0;left:0;width:20rem;min-height:100vh}.app-container{max-width:65rem;margin-left:20rem}}.error-404{text-align:center}.error-404-title{text-transform:uppercase}.icon{display:block-inline;width:1em;height:1em;vertical-align:-.125em}.pagination{display:block;list-style:none;padding:0;font-size:.8em;text-align:center;margin:3em 0}.page-item{display:inline-block}.page-item .page-link{display:block;padding:.285em .8em}.page-item.active .page-link{color:#fff;border-radius:2em;background:#57cc8a}.post-title{color:#fff}.post-content pre{border-left:.4em solid rgba(87,204,138,.8);padding-left:1em}.post-meta{font-size:.8em}.posts-list{padding:0}.posts-list-item{list-style:none;border-bottom:1px dashed rgba(255,255,255,.3);padding:.4em 0}.posts-list-item-description{display:block;font-size:.8em}.tag{display:inline-block;margin-right:.2em;padding:0 .6em;font-size:.9em;border-radius:.2em;white-space:nowrap;background:rgba(255,255,255,.1);transition:background .8s}.tag:hover{background:rgba(255,255,255,.3)}
+\ No newline at end of file
+diff --git a/resources/_gen/assets/scss/css/main.scss_e86386c8bae1cd02295de71a1be078d6.json b/resources/_gen/assets/scss/css/main.scss_e86386c8bae1cd02295de71a1be078d6.json
+new file mode 100644
+index 0000000..57a8b64
+--- /dev/null
++++ b/resources/_gen/assets/scss/css/main.scss_e86386c8bae1cd02295de71a1be078d6.json
+@@ -0,0 +1 @@
++{"Target":"css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css","MediaType":"text/css","Data":{"Integrity":"sha256-+Q9e3UNux7dK0FR5oFcFdwMGkR9yEZPnhFlI+wf+EzU="}}
+\ No newline at end of file
+diff --git a/themes/m10cc b/themes/m10cc
+new file mode 160000
+index 0000000..2e997de
+--- /dev/null
++++ b/themes/m10cc
+@@ -0,0 +1 @@
++Subproject commit 2e997de02000d1bc8277bfe0b97f4a27c2d13feb

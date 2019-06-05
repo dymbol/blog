@@ -22,7 +22,7 @@ draft: true
     Określa ona m.in niskopopiołowość tego oleju. Dlatego jest zalecana do silników wyposazonych w filtr _DPF_.
 ### Filtr oleju
 Zalecana jest wymiana filtra oleju przy każdej wymianie oleju. Warto to zrobić, również dlatego, że w przypdaku tego silnika filtr jest w postaci wkładu i jest stosunkowo tani.
-### Podkładka korka spustowego
+### Podkładka korka spustowego i/lub korek
 ### Spinki osłony podwozia
 ### Mycie silnika
 ### Płukanka
